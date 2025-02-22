@@ -1,16 +1,27 @@
-Package: lulcbrasildata
+Package: lulcbrasil-samples
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Sample Dataset of the Restore+ Project
 Version: 0.1.0
-Authors@R: c(
-    person(
-      "Jane", "Doe",
-      email = "jane@example.com",
-      role = c("aut", "cre")
-    )
-  )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
-Encoding: UTF-8
+Authors@R: c(person('Gilberto', 'Camara', role = c('aut', 'cre'), email = 'gilberto.camara@inpe.br'), 
+             person('Rolf', 'Simoes', role = c('aut'), email = 'rolf.simoes@inpe.br'),
+             person('Felipe', 'Carlos', role = c('aut'), email = 'efelipecarlos@gmail.com'),
+             person('Felipe', 'Souza', role = c('aut'), email = 'lipecaso@gmail.com'))
+Maintainer: Gilberto Camara <gilberto.camara@inpe.br>
+Description: This project contains in situ datasets used in the Restore+ project.
+    These datasets consist of time series from selected locations,
+    which are used in statistical learning models within the scope of the Restore+ project.
+    This version requires sits 1.4.0 or later.
+    
+Depends: R (>= 4.0)
+URL: https://github.com/restore-plus/lulcbrasil-samples/
+BugReports: https://github.com/restore-plus/lulcbrasil-samples/issues
+License: GPL-2 | file LICENSE
+Imports: 
+    tibble
+ByteCompile: true
 LazyData: true
+Encoding: UTF-8
+Collate: 
+    'data.R'
+    'zzz.R'
+RoxygenNote: 7.2.3
