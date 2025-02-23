@@ -3,12 +3,6 @@ title: "Samples for the Restore+ project dataset."
 output: github_document
 ---
 
-<style>
-  td:nth-child(even) {
-    width: 80%;
-  }
-</style>
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```

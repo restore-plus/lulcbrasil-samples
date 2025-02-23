@@ -1,12 +1,6 @@
 Samples for the Restore+ project dataset.
 ================
 
-<style>
-  td:nth-child(even) {
-    width: 80%;
-  }
-</style>
-
 <img src="./inst/extdata/sticker/restoreplus_sticker.png" alt="RESTORE+ icon" align="right" height="150" width="150"/>
 
 This project contains in-situ datasets used in the RESTORE+ project.
