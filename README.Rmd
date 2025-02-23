@@ -3,6 +3,12 @@ title: "Samples for the Restore+ project dataset."
 output: github_document
 ---
 
+<style>
+  td:nth-child(even) {
+    width: 80%;
+  }
+</style>
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -10,75 +16,297 @@ knitr::opts_chunk$set(echo = TRUE)
 <img src="./inst/extdata/sticker/restoreplus_sticker.png" alt="RESTORE+ icon" align="right" height="150" width="150"/>
 
 
-This project contains in situ data sets used in the RESTORE+ project. These data sets consists of time series of selected locations which are used to train machine learning models, rds files containing training locations, and data cubes to run examples of sits usage.
+This project contains in-situ datasets used in the RESTORE+ project. These datasets contains time-series in `RDS` format of selected regions, which can be used to train machine-learning models.
 
-To load these data sets:
+To load these datasets, first, install the `lulcbrasil-samples` package using [devtools](https://devtools.r-lib.org/):
 
-`devtools::install_github("e-sensing/lulcbrasil-samples")`
+```r
+devtools::install_github("restore-plus/lulcbrasil-samples")
+```
 
-## Time series samples for classification using machine learning
+In case of any issue, please check the [installation tip](#installation-tips) section.
 
-### Data availability
+## Data format
 
-R package `lulcbrasil-samples` contains time series to be used for
-classification with machine learning methods which are available when
-the package is loaded using `library(lulcbrasil-samples)`. All satellite
-image time series have the following columns:
+The `lulcbrasil-samples` R package contains time-series to be used for classification with machine learning methods which are available when the package is loaded using `library(lulcbrasilsamples)`. All satellite image time-series have the following columns:
 
-- longitude (East-west coordinate of the time series sample in WGS 84).
-- latitude (North-south coordinate of the time series sample in WGS 84).
-- start_date (initial date of the time series).
-- end_date (final date of the time series).
-- label (the class label associated to the sample).
-- cube (the name of the image data cube associated with the data).
-- time_series (list with the values of the time series).
+- `longitude` (East-west coordinate of the time series sample in WGS 84).
+- `latitude` (North-south coordinate of the time series sample in WGS 84).
+- `start_date` (initial date of the time series).
+- `end_date` (final date of the time series).
+- `label` (the class label associated to the sample).
+- `cube` (the name of the image data cube associated with the data).
+- `time_series` (list with the values of the time series).
 
-## RDS files with samples of land use and land cover
+## Datasets available
 
-R package `lulcbrasil-samples` contains rds files to be used for extraction of time series from data cubes. All rds files have the following columns:
+In the sections below is the metadata of each dataset available in the `lulcbrasil-samples` package.
 
-- longitude (East-west coordinate of the time series sample in WGS 84).
-- latitude (North-south coordinate of the time series sample in WGS 84).
-- start_date (initial date of the time series).
-- end_date (final date of the time series).
-- label (the class label associated to the sample).
+### Land Use and Land Cover in Baixo Tocantins using LANDSAT-C2-L2 for 1996
 
-## Land Use and Land Cover in Rondônia using LANDSAT-C2-L2
+The following table presents the metadata of this dataset:
 
-A dataset containing 1,104 time series sampled in Rondônia, obtained from a set of LANDSAT-C2-L2 images over a subset of the Microsoft Planetary Computer (MPC) tile, with a resolution of 30 meters. Each time series covers one year of 3-month composites (1988-01-01 to 1988-12-31), totaling four data points and sex spectral bands (BLUE, GREEN, RED, NIR08, SWIR16, SWIR22), four spectral indices (NDVI, EVI, MNDWI, NBR), and twelve land cover classes (Clear_Cut_Bare_Soil, Clear_Cut_Burned_Area, Clear_Cut_Vegetation, Forest, Water, Moist_Land, Wetland, Moist_Soil, Riparian_Forest, Mountainside_Forest, Eutrophic_Soil, Dystrophic_Soil).
+| **Attribute**            | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Dataset ID**         | `samples_baixotocantins_landsat_1996`                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Region**               | Baixo Tocantins in Para state (Brazil)                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Number of Time Series** | `465`                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Data Source**          | Microsoft Planetary Computer (MPC)                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Spatial Resolution**   | 30 meters                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Time Extent**          | `1996-01-01` to `1996-12-31`                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Temporal Resolution**  | 3-month composites (4 data points per year)                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Spectral Bands**       | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22`                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Land Cover Classes**   | `Small-Scale Agriculture - AGPE`, `All Water Bodies - AGUA`, `Primary Forest - FLO`, `Others - OT (Beaches, Outcrops, and Sandbanks)`, `Clean Pasture - PL`, `Dirty Pasture and Pasture with Regeneration - PSR`, `Urbanized Area - URB`, `Advanced Secondary Vegetation - VSA`, `Initial Secondary Vegetation - VSI`                                                                                                                                                                     |
+| **Reference**            | Anielli Souza, Antonio Monteiro, Maria Escada, *“Os sistemas do açaí na paisagem amazônica: elementos para análise da economia do açaí da região do Baixo Tocantins-PA”* (*The Açaí Systems in the Amazonian Landscape: Elements for the Analysis of the Açaí Economy in the Baixo Tocantins-PA Region*), 2024. [Access Link](http://mtc-m21d.sid.inpe.br/col/urlib.net/www/2021/06.04.03.40.25/doc/mirrorget.cgi?languagebutton=pt-BR&metadatarepository=sid.inpe.br/mtc-m21d/2024/09.03.22.32.35&index=0&serveraddress=mtc-m21d.sid.inpe.br+808&choice=full&lastupdate=2024:09.04.13.03.22+urlib.net/www/2021/06.04.03.40+pubtc@inpe.br+%7BD+%7B%7D%7D) |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) |
 
-Reference: Lucas Ferreira.
+To use this dataset, you can use the following command:
+ 
+```r
+library(sits)
+library(lulcbrasilsamples)
 
-License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+data("samples_baixotocantins_landsat_1996")
+```
 
-## Land Use and Land Cover in Baixo Tocantins using LANDSAT-C2-L2 for 1996
+By using the command above, the dataset will be available in the `samples_baixotocantins_landsat_1996` variable.
 
-A dataset containing 465 time series sampled in Baixo Tocantins, obtained from a set of LANDSAT-C2-L2 images over a subset of the Microsoft Planetary Computer (MPC) tile, with a resolution of 30 meters. Each time series covers one year of 3-month composites (01/01/1996 to 12/31/1996), totaling four data points and six spectral bands (BLUE, GREEN, RED, NIR08, SWIR16, SWIR22), four spectral indices (NDVI, EVI, MNDWI, NBR), and nine land cover classes (Small-Scale Agriculture - AGPE, All Water Bodies - AGUA, Primary Forest - FLO, Others - OT (Beaches, Outcrops, and Sandbanks), Clean Pasture - PL, Dirty Pasture and Pasture with Regeneration - PSR, Urbanized Area - URB, Advanced Secondary Vegetation - VSA, Initial Secondary Vegetation - VSI).
+<details>
+<summary>Click to learn how to view the data</summary>
 
-Reference: Anielli Souza, Antonio Monteiro, Maria Escada, “Os sistemas do açaí na paisagem amazônica: elementos para análise da economia do açaí da região do Baixo Tocantins-PA” [The Açaí Systems in the Amazonian Landscape: Elements for the Analysis of the Açaí Economy in the Baixo Tocantins-PA Region]. Year: 2024. [Access](http://mtc-m21d.sid.inpe.br/col/urlib.net/www/2021/06.04.03.40.25/doc/mirrorget.cgi?languagebutton=pt-BR&metadatarepository=sid.inpe.br/mtc-m21d/2024/09.03.22.32.35&index=0&serveraddress=mtc-m21d.sid.inpe.br+808&choice=full&lastupdate=2024:09.04.13.03.22+urlib.net/www/2021/06.04.03.40+pubtc@inpe.br+%7BD+%7B%7D%7D)
+If you want to view the dataset you just loaded, you can use the [sits](https://github.com/e-sensing/sits) R package:
 
-License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+```r
+plot(samples_baixotocantins_landsat_1996)
+```
 
-## Land Use and Land Cover in Baixo Tocantins using LANDSAT-C2-L2 for 2021
+To view it in am interactive map, use:
 
-A dataset containing 383 time series sampled in Baixo Tocantins, obtained from a set of LANDSAT-C2-L2 images over a subset of the Microsoft Planetary Computer (MPC) tile, with a resolution of 30 meters. Each time series covers one year of 3-month composites (01/01/2021 to 12/31/2021), totaling four data points and six spectral bands (BLUE, GREEN, RED, NIR08, SWIR16, SWIR22), four spectral indices (NDVI, EVI, MNDWI, NBR), and nine land cover classes (Small-Scale Agriculture - AGPE, Large-Scale Agriculture - AGLE2 (only oil palm), All Water Bodies - AGUA, Primary Forest - FLO, Others - OT (Beaches, Outcrops, and Sandbanks), Clean Pasture - PL, Dirty Pasture and Pasture with Regeneration - PSR, Urbanized Area - URB, Advanced Secondary Vegetation - VSA, Initial Secondary Vegetation - VSI).
 
-Reference: Anielli Souza, Antonio Monteiro, Maria Escada, “Os sistemas do açaí na paisagem amazônica: elementos para análise da economia do açaí da região do Baixo Tocantins-PA” [The Açaí Systems in the Amazonian Landscape: Elements for the Analysis of the Açaí Economy in the Baixo Tocantins-PA Region]. Year: 2024. [Access](http://mtc-m21d.sid.inpe.br/col/urlib.net/www/2021/06.04.03.40.25/doc/mirrorget.cgi?languagebutton=pt-BR&metadatarepository=sid.inpe.br/mtc-m21d/2024/09.03.22.32.35&index=0&serveraddress=mtc-m21d.sid.inpe.br+808&choice=full&lastupdate=2024:09.04.13.03.22+urlib.net/www/2021/06.04.03.40+pubtc@inpe.br+%7BD+%7B%7D%7D)
+```r
+sits_view(samples_baixotocantins_landsat_1996)
+```
 
-License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
+</details>
 
-## Land Use and Land Cover in the Amazon Biome using LANDSAT-C2-L2
+### Land Use and Land Cover in Baixo Tocantins using LANDSAT-C2-L2 for 2021
 
-A dataset containing 33,052 time series sampled in the Amazon Biome, obtained from a set of LANDSAT-C2-L2 images over a subset of the Microsoft Planetary Computer (MPC) tile, with a resolution of 30 meters. Each time series covers one year of 3-month composites (2002-09-01 to 2003-08-31), totaling four data points and six spectral bands (BLUE, GREEN, RED, NIR08, SWIR16, SWIR22), four spectral indices (NDVI, EVI, MNDWI, NBR), and nine land cover classes (Fallow_Cotton, Forest, Millet_Cotton, Pasture, Savanna, Savanna_Roraima, Soy_Corn, Soy_Cotton, Soy_Fallow, Soy_Millet, Soy_Sunflower, Wetlands).
+The following table presents the metadata of this dataset:
 
-Reference: Gilberto Camara, Rolf Simoes, et al., “Land use and land cover maps for Amazon biome in Brazil for 2001-2019 derived from MODIS time series [dataset]”. (2020). PANGAEA, https://doi.org/10.1594/PANGAEA.911560
 
-License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+| **Attribute**            | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Dataset ID**         | `samples_baixotocantins_landsat_2021`                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Region**               | Baixo Tocantins in Para state (Brazil)                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Number of Time Series** | `533`                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Data Source**          | Microsoft Planetary Computer (MPC)                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Spatial Resolution**   | 30 meters                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Time Extent**          | `2021-01-01` to `2021-12-31`                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Temporal Resolution**  | 3-month composites (4 data points per year)                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Spectral Bands**       | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22`                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Land Cover Classes**   | `Small-Scale Agriculture - AGPE`, `All Water Bodies - AGUA`, `Primary Forest - FLO`, `Others - OT (Beaches, Outcrops, and Sandbanks)`, `Clean Pasture - PL`, `Dirty Pasture and Pasture with Regeneration - PSR`, `Urbanized Area - URB`, `Advanced Secondary Vegetation - VSA`, `Initial Secondary Vegetation - VSI`, `Large-Scale Agriculture - AGLE2`                                                                                                                                                                     |
+| **Reference**            | Anielli Souza, Antonio Monteiro, Maria Escada, *“Os sistemas do açaí na paisagem amazônica: elementos para análise da economia do açaí da região do Baixo Tocantins-PA”* (*The Açaí Systems in the Amazonian Landscape: Elements for the Analysis of the Açaí Economy in the Baixo Tocantins-PA Region*), 2024. [Access Link](http://mtc-m21d.sid.inpe.br/col/urlib.net/www/2021/06.04.03.40.25/doc/mirrorget.cgi?languagebutton=pt-BR&metadatarepository=sid.inpe.br/mtc-m21d/2024/09.03.22.32.35&index=0&serveraddress=mtc-m21d.sid.inpe.br+808&choice=full&lastupdate=2024:09.04.13.03.22+urlib.net/www/2021/06.04.03.40+pubtc@inpe.br+%7BD+%7B%7D%7D) |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) |
 
-## Land Use and Land Cover in the Amazon Rainforest using LANDSAT-C2-L2
+To use this dataset, you can use the following command:
+ 
+```r
+library(sits)
+library(lulcbrasilsamples)
 
-A dataset containing 1,489 time series sampled in Rondônia, obtained from a set of LANDSAT-C2-L2 images over a subset of the Microsoft Planetary Computer (MPC) tile, with a resolution of 30 meters. Each time series covers one year of 3-month composites (01/01/2020 to 12/31/2020), totaling four data points and six spectral bands (BLUE, GREEN, RED, NIR08, SWIR16, SWIR22), four spectral indices (NDVI, EVI, MNDWI, NBR), and one land cover class (Forest).
+data("samples_baixotocantins_landsat_2021")
+```
 
-Reference: Luis Sadeck.
+By using the command above, the dataset will be available in the `samples_baixotocantins_landsat_2021` variable.
 
-License: Creative Commons Attribution 4.0 International (CC BY 4.0).
+<details>
+<summary>Click to learn how to view the data</summary>
+
+If you want to view the dataset you just loaded, you can use the [sits](https://github.com/e-sensing/sits) R package:
+
+```r
+plot(samples_baixotocantins_landsat_2021)
+```
+
+To view it in am interactive map, use:
+
+
+```r
+sits_view(samples_baixotocantins_landsat_2021)
+```
+
+To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
+</details>
+
+### Land Cover in the Amazon Rainforest using LANDSAT-C2-L2 for 2020
+
+The following table presents the metadata of this dataset:
+
+| **Attribute**            | **Details**                                                                                  |
+|--------------------------|----------------------------------------------------------------------------------------------|
+| **Dataset ID**         | `samples_amazon_landsat_2020`                                                          |
+| **Region**               | Amazon Rainforest                                                                                     |
+| **Number of Time Series** | `1,489` (463 already available)                                                                                        |
+| **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                |
+| **Data Source**          | Microsoft Planetary Computer (MPC)                                                      |
+| **Spatial Resolution**   | 30 meters                                                                                    |
+| **Time Extent**          | `2020-01-01` to `2020-12-31`                                                                  |
+| **Temporal Resolution**  | 3-month composites (4 data points per year)                                                  |
+| **Spectral Bands**       | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22`                                                      |
+| **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                        |
+| **Land Cover Classes**   | `Forest`                                                                                       |
+| **Reference**            | Luis Sadeck                                                                               |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)                                                                                |
+
+To use this dataset, you can use the following command:
+ 
+```r
+library(sits)
+library(lulcbrasilsamples)
+
+data("samples_amazon_landsat_2020")
+```
+
+By using the command above, the dataset will be available in the `samples_amazon_landsat_2020` variable.
+
+<details>
+<summary>Click to learn how to view the data</summary>
+
+If you want to view the dataset you just loaded, you can use the [sits](https://github.com/e-sensing/sits) R package:
+
+```r
+plot(samples_amazon_landsat_2020)
+```
+
+To view it in am interactive map, use:
+
+
+```r
+sits_view(samples_amazon_landsat_2020)
+```
+
+To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
+</details>
+
+
+### Land Use and Land Cover in Rondonia using LANDSAT-C2-L2 for 1988
+
+The following table presents the metadata of this dataset:
+
+| **Attribute**            | **Details**                                                                                                                                                                 |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Dataset ID**         | `samples_rondonia_landsat_1988`  |
+| **Region**               | Rondonia state (Brazil)                                                                                                                                                                    |
+| **Number of Time Series** | `1,104`                                                                                                                                                                     |
+| **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                                                                                              |
+| **Data Source**          | Microsoft Planetary Computer (MPC)                                                                                                                                    |
+| **Spatial Resolution**   | 30 meters                                                                                                                                                                  |
+| **Time Extent**          | `1988-01-01` to `1988-12-31`                                                                                                                                                   |
+| **Temporal Resolution**  | `3-month composite` (4 data points per year)                                                                                                                                |
+| **Spectral Bands**       | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22`                                                                                                                                   |
+| **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                      |
+| **Land Cover Classes**   | `Clear_Cut_Bare_Soil`, `Clear_Cut_Burned_Area`, `Clear_Cut_Vegetation`, `Forest`, `Water`, `Moist_Land`, `Wetland`, `Moist_Soil`, `Riparian_Forest`, `Mountainside_Forest`, `Eutrophic_Soil`, `Dystrophic_Soil` |
+| **Reference**            | Lucas Ferreira                                                                             |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)                                                                                |
+
+To use this dataset, you can use the following command:
+ 
+```r
+library(sits)
+library(lulcbrasilsamples)
+
+data("samples_rondonia_landsat_1988")
+```
+
+By using the command above, the dataset will be available in the `samples_rondonia_landsat_1988` variable.
+
+<details>
+<summary>Click to learn how to view the data</summary>
+
+If you want to view the dataset you just loaded, you can use the [sits](https://github.com/e-sensing/sits) R package:
+
+```r
+plot(samples_rondonia_landsat_1988)
+```
+
+To view it in am interactive map, use:
+
+
+```r
+sits_view(samples_rondonia_landsat_1988)
+```
+
+To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
+</details>
+
+
+### Land Use and Land Cover in Rondonia using LANDSAT-C2-L2 for 2022
+
+The following table presents the metadata of this dataset:
+
+| **Attribute**            | **Details**                                                                                                                                                                 |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Dataset ID**         | `samples_rondonia_landsat_2022`  |
+| **Region**               | Rondonia state (Brazil)                                                                                                                                                                    |
+| **Number of Time Series** | `6,607`                                                                                                                                                                     |
+| **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                                                                                              |
+| **Data Source**          | Microsoft Planetary Computer (MPC)                                                                                                                                    |
+| **Spatial Resolution**   | 30 meters                                                                                                                                                                  |
+| **Time Extent**          | `2022-01-01` to `2022-12-31`                                                                                                                                                   |
+| **Temporal Resolution**  | `3-month composite` (4 data points per year)                                                                                                                                |
+| **Spectral Bands**       | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22`                                                                                                                                   |
+| **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                      |
+| **Land Cover Classes**   | `Clear_Cut_Bare_Soil`, `Clear_Cut_Burned_Area`, `Clear_Cut_Vegetation`, `Forest`, `Mountainside_Forest`, `Riparian_Forest`, `Seasonally_Flooded`, `Water`, `Wetland` |
+| **Reference**            | Wix Project                                                                            |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)                                                                                |
+To use this dataset, you can use the following command:
+ 
+ 
+```r
+library(sits)
+library(lulcbrasilsamples)
+
+data("samples_rondonia_landsat_2022")
+```
+
+By using the command above, the dataset will be available in the `samples_rondonia_landsat_2022` variable.
+
+<details>
+<summary>Click to learn how to view the data</summary>
+
+If you want to view the dataset you just loaded, you can use the [sits](https://github.com/e-sensing/sits) R package:
+
+```r
+plot(samples_rondonia_landsat_2022)
+```
+
+To view it in am interactive map, use:
+
+
+```r
+sits_view(samples_rondonia_landsat_2022)
+```
+
+To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
+</details>
+
+## Installation tips
+
+If you are having network issues installing the `lulcbrasil-samples` package, please consider increasing the timeout limit:
+
+```r
+options(timeout = 300) # Set timeout to 5 minutes
+```
+
+After updating the timeout limit, you can install the package using the [devtools](https://devtools.r-lib.org/) command:
+
+```
+devtools::install_github("restore-plus/lulcbrasil-samples")
+```
+
+If you have any other issues, please ask for help in the [issue section](https://github.com/restore-plus/lulcbrasil-samples); we are keen to support you!
