@@ -14,8 +14,15 @@ using [devtools](https://devtools.r-lib.org/):
 devtools::install_github("restore-plus/lulcbrasil-samples")
 ```
 
-In case of any issue, please check the [installation
-tip](#installation-tips) section.
+Next, load it:
+
+    library(lulcbrasilsamples)
+
+In the next sections are examples of how you can use the datasets
+available.
+
+> In case of any issue in following the steps above, please check the
+> [installation tip](#installation-tips) section.
 
 ## Data format
 
