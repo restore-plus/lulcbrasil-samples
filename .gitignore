@@ -56,4 +56,7 @@ rsconnect/
 # R package: bookdown caching files
 /*_files/
 
+# Mac-related file
+.DS_Store
+
 # End of https://www.toptal.com/developers/gitignore/api/r
