@@ -246,7 +246,6 @@ sits_view(samples_rondonia_landsat_1988)
 To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
 </details>
 
-
 ### Land Use and Land Cover in Rondonia using LANDSAT-C2-L2 for 2022
 
 The following table presents the metadata of this dataset:
@@ -255,7 +254,7 @@ The following table presents the metadata of this dataset:
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Dataset ID**         | `samples_rondonia_landsat_2022`  |
 | **Region**               | Rondonia state (Brazil)                                                                                                                                                                    |
-| **Number of Time Series** | `6,607`                                                                                                                                                                     |
+| **Number of Time Series** | `6,007`                                                                                                                                                                     |
 | **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                                                                                              |
 | **Data Source**          | Microsoft Planetary Computer (MPC)                                                                                                                                    |
 | **Spatial Resolution**   | 30 meters                                                                                                                                                                  |
@@ -296,6 +295,7 @@ sits_view(samples_rondonia_landsat_2022)
 
 To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
 </details>
+
 
 ## Installation tips
 

@@ -270,7 +270,7 @@ The following table presents the metadata of this dataset:
 |----|----|
 | **Dataset ID** | `samples_rondonia_landsat_2022` |
 | **Region** | Rondonia state (Brazil) |
-| **Number of Time Series** | `6,607` |
+| **Number of Time Series** | `6,007` |
 | **Satellite-Sensor** | `LANDSAT-C2-L2` |
 | **Data Source** | Microsoft Planetary Computer (MPC) |
 | **Spatial Resolution** | 30 meters |
