@@ -316,6 +316,60 @@ To learn more, please check the [sits R package
 book](https://e-sensing.github.io/sitsbook/index.html).
 </details>
 
+### Land Use and Land Cover in Amazon Biome using LANDSAT-C2-L2 for 2013-2014
+
+The following table presents the metadata of this dataset:
+
+| **Attribute** | **Details** |
+|----|----|
+| **Dataset ID** | `samples_amazonbiome_landsat_2013` |
+| **Region** | Amazon Biome (Brazil) |
+| **Number of Time Series** | `598` |
+| **Satellite-Sensor** | `LANDSAT-C2-L2` |
+| **Data Source** | Microsoft Planetary Computer (MPC) |
+| **Spatial Resolution** | 30 meters |
+| **Time Extent** | `2013-09-01` to `2014-06-01` |
+| **Temporal Resolution** | `3-month composite` (4 data points per year) |
+| **Spectral Bands** | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22` |
+| **Spectral Indices** | `NDVI`, `EVI`, `MNDWI`, `NBR` |
+| **Land Cover Classes** | `Pasture`, `Savanna`, `Soy_Fallow`, `Soy_Corn`, `Soy_Cotton` |
+| **Reference** | Rolf Simoes |
+| **License** | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) |
+
+To use this dataset, you can use the following command:
+
+``` r
+library(sits)
+library(lulcbrasilsamples)
+
+data("samples_amazonbiome_landsat_2013")
+```
+
+By using the command above, the dataset will be available in the
+`samples_amazonbiome_landsat_2013` variable.
+
+<details>
+<summary>
+Click to learn how to view the data
+</summary>
+
+If you want to view the dataset you just loaded, you can use the
+[sits](https://github.com/e-sensing/sits) R package:
+
+``` r
+plot(samples_amazonbiome_landsat_2013)
+```
+
+To view it in am interactive map, use:
+
+``` r
+sits_view(samples_amazonbiome_landsat_2013)
+```
+
+To learn more, please check the [sits R package
+book](https://e-sensing.github.io/sitsbook/index.html).
+</details>
+
 ## Installation tips
 
 If you are having network issues installing the `lulcbrasil-samples`
