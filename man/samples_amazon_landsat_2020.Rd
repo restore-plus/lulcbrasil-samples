@@ -3,7 +3,7 @@
 \docType{data}
 \name{samples_amazon_landsat_2020}
 \alias{samples_amazon_landsat_2020}
-\title{Land Cover in the Amazon Rainforest using LANDSAT-C2-L2}
+\title{Land Cover in the Amazon Rainforest using LANDSAT-C2-L2 for 2020}
 \format{
 A \code{sits} tibble containing 1,489 (463 already available) samples
 extracted from LANDSAT-C2-L2 (30 meters resolution) in Amazon Rainforest.

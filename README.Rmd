@@ -62,7 +62,7 @@ The following table presents the metadata of this dataset:
 | **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | **Land Cover Classes**   | `Small-Scale Agriculture - AGPE`, `All Water Bodies - AGUA`, `Primary Forest - FLO`, `Others - OT (Beaches, Outcrops, and Sandbanks)`, `Clean Pasture - PL`, `Dirty Pasture and Pasture with Regeneration - PSR`, `Urbanized Area - URB`, `Advanced Secondary Vegetation - VSA`, `Initial Secondary Vegetation - VSI`                                                                                                                                                                     |
 | **Reference**            | Anielli Souza, Antonio Monteiro, Maria Escada, *“Os sistemas do açaí na paisagem amazônica: elementos para análise da economia do açaí da região do Baixo Tocantins-PA”* (*The Açaí Systems in the Amazonian Landscape: Elements for the Analysis of the Açaí Economy in the Baixo Tocantins-PA Region*), 2024. [Access Link](http://mtc-m21d.sid.inpe.br/col/urlib.net/www/2021/06.04.03.40.25/doc/mirrorget.cgi?languagebutton=pt-BR&metadatarepository=sid.inpe.br/mtc-m21d/2024/09.03.22.32.35&index=0&serveraddress=mtc-m21d.sid.inpe.br+808&choice=full&lastupdate=2024:09.04.13.03.22+urlib.net/www/2021/06.04.03.40+pubtc@inpe.br+%7BD+%7B%7D%7D) |
-| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/Cc-by-nc-sa_icon.png" alt="CC BY Icon" width="70">[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
 
 To use this dataset, you can use the following command:
  
@@ -113,7 +113,7 @@ The following table presents the metadata of this dataset:
 | **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | **Land Cover Classes**   | `Small-Scale Agriculture - AGPE`, `All Water Bodies - AGUA`, `Primary Forest - FLO`, `Others - OT (Beaches, Outcrops, and Sandbanks)`, `Clean Pasture - PL`, `Dirty Pasture and Pasture with Regeneration - PSR`, `Urbanized Area - URB`, `Advanced Secondary Vegetation - VSA`, `Initial Secondary Vegetation - VSI`, `Large-Scale Agriculture - AGLE2`                                                                                                                                                                     |
 | **Reference**            | Anielli Souza, Antonio Monteiro, Maria Escada, *“Os sistemas do açaí na paisagem amazônica: elementos para análise da economia do açaí da região do Baixo Tocantins-PA”* (*The Açaí Systems in the Amazonian Landscape: Elements for the Analysis of the Açaí Economy in the Baixo Tocantins-PA Region*), 2024. [Access Link](http://mtc-m21d.sid.inpe.br/col/urlib.net/www/2021/06.04.03.40.25/doc/mirrorget.cgi?languagebutton=pt-BR&metadatarepository=sid.inpe.br/mtc-m21d/2024/09.03.22.32.35&index=0&serveraddress=mtc-m21d.sid.inpe.br+808&choice=full&lastupdate=2024:09.04.13.03.22+urlib.net/www/2021/06.04.03.40+pubtc@inpe.br+%7BD+%7B%7D%7D) |
-| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/Cc-by-nc-sa_icon.png" alt="CC BY Icon" width="70">[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
 
 To use this dataset, you can use the following command:
  
@@ -145,6 +145,57 @@ sits_view(samples_baixotocantins_landsat_2021)
 To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
 </details>
 
+### LULC in Baixo Tocantins using HLSL30 for 2021
+
+The following table presents the metadata of this dataset:
+
+
+| **Attribute**            | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Dataset ID**         | `samples_baixotocantins_hls_2021`                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Region**               | Baixo Tocantins in Para state (Brazil)                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Number of Time Series** | `533`                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Satellite-Sensor**     | `HLSL30`                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Data Source**          | NASA                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Spatial Resolution**   | 30 meters                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Time Extent**          | `2021-01-01` to `2021-12-31`                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Temporal Resolution**  | 3-month composites (4 data points per year)                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Spectral Bands**       | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22`                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Land Cover Classes**   | `Small-Scale Agriculture - AGPE`, `All Water Bodies - AGUA`, `Primary Forest - FLO`, `Others - OT (Beaches, Outcrops, and Sandbanks)`, `Clean Pasture - PL`, `Dirty Pasture and Pasture with Regeneration - PSR`, `Urbanized Area - URB`, `Advanced Secondary Vegetation - VSA`, `Initial Secondary Vegetation - VSI`, `Large-Scale Agriculture - AGLE2`                                                                                                                                                                     |
+| **Reference**            | Anielli Souza, Antonio Monteiro, Maria Escada, *“Os sistemas do açaí na paisagem amazônica: elementos para análise da economia do açaí da região do Baixo Tocantins-PA”* (*The Açaí Systems in the Amazonian Landscape: Elements for the Analysis of the Açaí Economy in the Baixo Tocantins-PA Region*), 2024. [Access Link](http://mtc-m21d.sid.inpe.br/col/urlib.net/www/2021/06.04.03.40.25/doc/mirrorget.cgi?languagebutton=pt-BR&metadatarepository=sid.inpe.br/mtc-m21d/2024/09.03.22.32.35&index=0&serveraddress=mtc-m21d.sid.inpe.br+808&choice=full&lastupdate=2024:09.04.13.03.22+urlib.net/www/2021/06.04.03.40+pubtc@inpe.br+%7BD+%7B%7D%7D) |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/Cc-by-nc-sa_icon.png" alt="CC BY Icon" width="70">[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) |
+
+To use this dataset, you can use the following command:
+ 
+```r
+library(sits)
+library(lulcbrasilsamples)
+
+data("samples_baixotocantins_hls_2021")
+```
+
+By using the command above, the dataset will be available in the `samples_baixotocantins_hls_2021` variable.
+
+<details>
+<summary>Click to learn how to view the data</summary>
+
+If you want to view the dataset you just loaded, you can use the [sits](https://github.com/e-sensing/sits) R package:
+
+```r
+plot(samples_baixotocantins_hls_2021)
+```
+
+To view it in am interactive map, use:
+
+
+```r
+sits_view(samples_baixotocantins_hls_2021)
+```
+
+To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
+</details>
+
 ### Land Cover in the Amazon Rainforest using LANDSAT-C2-L2 for 2020
 
 The following table presents the metadata of this dataset:
@@ -163,7 +214,7 @@ The following table presents the metadata of this dataset:
 | **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                        |
 | **Land Cover Classes**   | `Forest`                                                                                       |
 | **Reference**            | Luis Sadeck                                                                               |
-| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)                                                                                |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/Cc-by-nc-sa_icon.png" alt="CC BY Icon" width="70">[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)                                                                                |
 
 To use this dataset, you can use the following command:
  
@@ -192,9 +243,58 @@ To view it in am interactive map, use:
 sits_view(samples_amazon_landsat_2020)
 ```
 
-To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
+To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html).
 </details>
 
+### Land Cover in the Amazon Rainforest using HLSL30 for 2020
+
+The following table presents the metadata of this dataset:
+
+| **Attribute**            | **Details**                                                                                  |
+|--------------------------|----------------------------------------------------------------------------------------------|
+| **Dataset ID**         | `samples_amazon_hls_2020`                                                          |
+| **Region**               | Amazon Rainforest                                                                                     |
+| **Number of Time Series** | `1,489` (463 already available)                                                                                        |
+| **Satellite-Sensor**     | `HLSL30`                                                                                |
+| **Data Source**          | NASA                                                      |
+| **Spatial Resolution**   | 30 meters                                                                                    |
+| **Time Extent**          | `2020-01-01` to `2020-12-31`                                                                  |
+| **Temporal Resolution**  | 3-month composites (4 data points per year)                                                  |
+| **Spectral Bands**       | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22`                                                      |
+| **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                        |
+| **Land Cover Classes**   | `Forest`                                                                                       |
+| **Reference**            | Luis Sadeck                                                                               |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/Cc-by-nc-sa_icon.png" alt="CC BY Icon" width="70">[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)                                                                                |
+
+To use this dataset, you can use the following command:
+ 
+```r
+library(sits)
+library(lulcbrasilsamples)
+
+data("samples_amazon_hls_2020")
+```
+
+By using the command above, the dataset will be available in the `samples_amazon_hls_2020` variable.
+
+<details>
+<summary>Click to learn how to view the data</summary>
+
+If you want to view the dataset you just loaded, you can use the [sits](https://github.com/e-sensing/sits) R package:
+
+```r
+plot(samples_amazon_hls_2020)
+```
+
+To view it in am interactive map, use:
+
+
+```r
+sits_view(samples_amazon_hls_2020)
+```
+
+To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html).
+</details>
 
 ### Land Use and Land Cover in Rondonia using LANDSAT-C2-L2 for 1988
 
@@ -214,7 +314,7 @@ The following table presents the metadata of this dataset:
 | **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                      |
 | **Land Cover Classes**   | `Clear_Cut_Bare_Soil`, `Clear_Cut_Burned_Area`, `Clear_Cut_Vegetation`, `Forest`, `Water`, `Moist_Land`, `Wetland`, `Moist_Soil`, `Riparian_Forest`, `Mountainside_Forest`, `Eutrophic_Soil`, `Dystrophic_Soil` |
 | **Reference**            | Lucas Ferreira                                                                             |
-| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)                                                                                |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/Cc-by-nc-sa_icon.png" alt="CC BY Icon" width="70">[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)                                                                                |
 
 To use this dataset, you can use the following command:
  
@@ -263,8 +363,8 @@ The following table presents the metadata of this dataset:
 | **Spectral Bands**       | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22`                                                                                                                                   |
 | **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                      |
 | **Land Cover Classes**   | `Clear_Cut_Bare_Soil`, `Clear_Cut_Burned_Area`, `Clear_Cut_Vegetation`, `Forest`, `Mountainside_Forest`, `Riparian_Forest`, `Seasonally_Flooded`, `Water`, `Wetland` |
-| **Reference**            | Wix Project                                                                            |
-| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)                                                                                |
+| **Reference**            | Instituto Clima e Sociedade - iCS                                                                           |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/Cc-by-nc-sa_icon.png" alt="CC BY Icon" width="70">[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)                                                                                |
 To use this dataset, you can use the following command:
  
  
@@ -314,7 +414,7 @@ The following table presents the metadata of this dataset:
 | **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                      |
 | **Land Cover Classes**   | `Pasture`, `Savanna`, `Soy_Fallow`, `Soy_Corn`, `Soy_Cotton` |
 | **Reference**            | Rolf Simoes                                                                            |
-| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/cc-by-icon.png" alt="CC BY Icon" width="70">[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)                                                                                |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/Cc-by-nc-sa_icon.png" alt="CC BY Icon" width="70">[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)                                                                                |
 To use this dataset, you can use the following command:
  
 ```r
@@ -340,6 +440,55 @@ To view it in am interactive map, use:
 
 ```r
 sits_view(samples_amazonbiome_landsat_2013)
+```
+
+To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
+</details>
+
+### Land Use and Land Cover in Legal Amazon using LANDSAT-C2-L2 for 2019-2020
+
+The following table presents the metadata of this dataset:
+
+| **Attribute**            | **Details**                                                                                                                                                                 |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Dataset ID**         | `samples_aml_landsat_2019`  |
+| **Region**               | Legal Amazon (Brazil)                                                                                                                                                                    |
+| **Number of Time Series** | `35,723`                                                                                                                                                                     |
+| **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                                                                                              |
+| **Data Source**          | Microsoft Planetary Computer (MPC)                                                                                                                                    |
+| **Spatial Resolution**   | 30 meters                                                                                                                                                                  |
+| **Time Extent**          | `2019-07-28` to `2020-07-27`                                                                                                                                                   |
+| **Temporal Resolution**  | `3-month composite` (4 data points per year)                                                                                                                                |
+| **Spectral Bands**       | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22`                                                                                                                                   |
+| **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                      |
+| **Land Cover Classes**   | `agr_semiperene`, `agr_temp_1`, `agr_temp_2mais`, `agric_perene`, `Corpo_Dagua`, `Past_Arbu`, `Past_Herb`, `silvicultura`, `Veg_sec` |
+| **Reference**            | Empresa Brasileira de Pesquisa Agropecuária - Embrapa                                                                            |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/Cc-by-nc-sa_icon.png" alt="CC BY Icon" width="70">[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)                                                                                |
+To use this dataset, you can use the following command:
+ 
+```r
+library(sits)
+library(lulcbrasilsamples)
+
+data("samples_aml_landsat_2019")
+```
+
+By using the command above, the dataset will be available in the `samples_aml_landsat_2019` variable.
+
+<details>
+<summary>Click to learn how to view the data</summary>
+
+If you want to view the dataset you just loaded, you can use the [sits](https://github.com/e-sensing/sits) R package:
+
+```r
+plot(samples_aml_landsat_2019)
+```
+
+To view it in am interactive map, use:
+
+
+```r
+sits_view(samples_aml_landsat_2019)
 ```
 
 To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
