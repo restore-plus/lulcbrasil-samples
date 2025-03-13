@@ -1,4 +1,4 @@
-Samples for the Restore+ project dataset.
+Samples for the Restore+ project
 ================
 
 <img src="./inst/extdata/sticker/restoreplus_sticker.png" alt="RESTORE+ icon" align="right" height="150" width="150"/>

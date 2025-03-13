@@ -1,6 +1,6 @@
 Package: lulcbrasilsamples
 Type: Package
-Title: Sample Dataset of the Restore+ Project
+Title: Samples for the Restore+ project
 Version: 0.1.0
 Authors@R: c(person('Gilberto', 'Camara', role = c('aut', 'cre'), email = 'gilberto.camara@inpe.br'), 
              person('Rolf', 'Simoes', role = c('aut'), email = 'rolf.simoes@inpe.br'),

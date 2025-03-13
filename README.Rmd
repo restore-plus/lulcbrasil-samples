@@ -1,5 +1,5 @@
 ---
-title: "Samples for the Restore+ project dataset."
+title: "Samples for the Restore+ project"
 output: github_document
 ---
 
