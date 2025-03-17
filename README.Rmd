@@ -204,7 +204,7 @@ The following table presents the metadata of this dataset:
 |--------------------------|----------------------------------------------------------------------------------------------|
 | **Dataset ID**         | `samples_amazon_landsat_2020`                                                          |
 | **Region**               | Amazon Rainforest                                                                                     |
-| **Number of Time Series** | `1,489` (463 already available)                                                                                        |
+| **Number of Time Series** | `1489` (463 already available)                                                                                        |
 | **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                |
 | **Data Source**          | Microsoft Planetary Computer (MPC)                                                      |
 | **Spatial Resolution**   | 30 meters                                                                                    |
@@ -254,7 +254,7 @@ The following table presents the metadata of this dataset:
 |--------------------------|----------------------------------------------------------------------------------------------|
 | **Dataset ID**         | `samples_amazon_hls_2020`                                                          |
 | **Region**               | Amazon Rainforest                                                                                     |
-| **Number of Time Series** | `1,489` (463 already available)                                                                                        |
+| **Number of Time Series** | `1489` (463 already available)                                                                                        |
 | **Satellite-Sensor**     | `HLSL30`                                                                                |
 | **Data Source**          | NASA                                                      |
 | **Spatial Resolution**   | 30 meters                                                                                    |
@@ -304,7 +304,7 @@ The following table presents the metadata of this dataset:
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Dataset ID**         | `samples_rondonia_landsat_1988`  |
 | **Region**               | Rondonia state (Brazil)                                                                                                                                                                    |
-| **Number of Time Series** | `1,104`                                                                                                                                                                     |
+| **Number of Time Series** | `1104`                                                                                                                                                                     |
 | **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                                                                                              |
 | **Data Source**          | Microsoft Planetary Computer (MPC)                                                                                                                                    |
 | **Spatial Resolution**   | 30 meters                                                                                                                                                                  |
@@ -354,7 +354,7 @@ The following table presents the metadata of this dataset:
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Dataset ID**         | `samples_rondonia_landsat_2022`  |
 | **Region**               | Rondonia state (Brazil)                                                                                                                                                                    |
-| **Number of Time Series** | `6,007`                                                                                                                                                                     |
+| **Number of Time Series** | `6007`                                                                                                                                                                     |
 | **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                                                                                              |
 | **Data Source**          | Microsoft Planetary Computer (MPC)                                                                                                                                    |
 | **Spatial Resolution**   | 30 meters                                                                                                                                                                  |
@@ -453,7 +453,7 @@ The following table presents the metadata of this dataset:
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Dataset ID**         | `samples_aml_landsat_2019`  |
 | **Region**               | Legal Amazon (Brazil)                                                                                                                                                                    |
-| **Number of Time Series** | `35,723`                                                                                                                                                                     |
+| **Number of Time Series** | `35723`                                                                                                                                                                     |
 | **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                                                                                              |
 | **Data Source**          | Microsoft Planetary Computer (MPC)                                                                                                                                    |
 | **Spatial Resolution**   | 30 meters                                                                                                                                                                  |
@@ -489,6 +489,58 @@ To view it in am interactive map, use:
 
 ```r
 sits_view(samples_aml_landsat_2019)
+```
+
+To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 
+</details>
+
+
+
+
+### Land Use and Land Cover in Legal Amazon using LANDSAT-C2-L2 for 2021-2022
+
+The following table presents the metadata of this dataset:
+
+| **Attribute**            | **Details**                                                                                                                                                                 |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Dataset ID**         | `samples_aml_landsat_2021`  |
+| **Region**               | Legal Amazon (Brazil)                                                                                                                                                                    |
+| **Number of Time Series** | `160496`                                                                                                                                                                     |
+| **Satellite-Sensor**     | `LANDSAT-C2-L2`                                                                                                                                                              |
+| **Data Source**          | Microsoft Planetary Computer (MPC)                                                                                                                                    |
+| **Spatial Resolution**   | 30 meters                                                                                                                                                                  |
+| **Time Extent**          | `12/07/2021` to `30/09/2022`                                                                                                                                                   |
+| **Temporal Resolution**  | `3-month composite` (4 data points per year)                                                                                                                                |
+| **Spectral Bands**       | `BLUE`, `GREEN`, `RED`, `NIR08`, `SWIR16`, `SWIR22`                                                                                                                                   |
+| **Spectral Indices**     | `NDVI`, `EVI`, `MNDWI`, `NBR`                                                                                                                                                      |
+| **Land Cover Classes**   | `1ciclo`, `2ciclos`, `agua`, `past_arb`, `past_herb`, `semiperene`, `veg_natural` |
+| **Reference**            | Empresa Brasileira de Pesquisa Agropecuária - Embrapa                                                                            |
+| **License**              | <img style="display: inline-block; vertical-align: middle; margin-right: 5px;" src="./inst/extdata/licenses/Cc-by-nc-sa_icon.png" alt="CC BY Icon" width="70">[Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)                                                                                |
+To use this dataset, you can use the following command:
+ 
+```r
+library(sits)
+library(lulcbrasilsamples)
+
+data("samples_aml_landsat_2021")
+```
+
+By using the command above, the dataset will be available in the `samples_aml_landsat_2021` variable.
+
+<details>
+<summary>Click to learn how to view the data</summary>
+
+If you want to view the dataset you just loaded, you can use the [sits](https://github.com/e-sensing/sits) R package:
+
+```r
+plot(samples_aml_landsat_2021)
+```
+
+To view it in am interactive map, use:
+
+
+```r
+sits_view(samples_aml_landsat_2021)
 ```
 
 To learn more, please check the [sits R package book](https://e-sensing.github.io/sitsbook/index.html). 

@@ -5,7 +5,8 @@ Version: 0.1.0
 Authors@R: c(person('Gilberto', 'Camara', role = c('aut', 'cre'), email = 'gilberto.camara@inpe.br'), 
              person('Rolf', 'Simoes', role = c('aut'), email = 'rolf.simoes@inpe.br'),
              person('Felipe', 'Carlos', role = c('aut'), email = 'efelipecarlos@gmail.com'),
-             person('Felipe', 'Souza', role = c('aut'), email = 'lipecaso@gmail.com'))
+             person('Felipe', 'Souza', role = c('aut'), email = 'lipecaso@gmail.com'),
+             person('Pedro', 'Brito', role = c('aut'), email = 'pedro.brito@inpe.br'))
 Maintainer: Gilberto Camara <gilberto.camara@inpe.br>
 Description: This project contains in situ datasets used in the Restore+ project.
     These datasets consist of time series from selected locations,
