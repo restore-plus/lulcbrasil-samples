@@ -22,7 +22,7 @@ time_series (list containing a tibble with the values of the time series).
 The training samples were collected by ground surveys
 and high-resolution image interpretation by experts from
 the Brazilian National Institute for Space Research (INPE)
-team and partners. It has 9 classes nine land cover
+team and partners. It has 9 classes land cover
 classes (\code{Clear_Cut_Bare_Soil}, \code{Clear_Cut_Burned_Area},
 \code{Clear_Cut_Vegetation}, \code{Forest}, \code{Mountainside_Forest},
 \code{Riparian_Forest}, \code{Seasonally_Flooded}, \code{Water},

@@ -34,6 +34,6 @@ data("samples_amazon_landsat_2020")
 }
 \description{
 A dataset containing a sits tibble with time-series samples from Amazon
-Rainforest in Brazil for 2020
+Rainforest in Brazil for 2020.
 }
 \keyword{datasets}
