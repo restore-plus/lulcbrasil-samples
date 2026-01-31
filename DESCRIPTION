@@ -24,4 +24,4 @@ Encoding: UTF-8
 Collate: 
     'data.R'
     'zzz.R'
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
