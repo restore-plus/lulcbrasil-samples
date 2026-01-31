@@ -44,15 +44,15 @@ location, time period, and label, encoded as following:
 
 - `longitude` (East-west coordinate in WGS 84).
 - `latitude` (North-south coordinate in WGS 84).
-- `start_date` (initial time series date).
-- `end_date` (final time series date).
-- `label` (labels associated to the sample).
+- `start_date` (Initial time series date).
+- `end_date` (Final time series date).
+- `label` (Labels associated to the sample).
 
 In the addition to these columns, samples in `RDS` files contain an
 extra column with the time series extracted from the data cubes used in
 the Restore+ Project.
 
-- `time_series` (time series data).
+- `time_series` (Time series data).
 
 ## Restore+ Project Samples
 
