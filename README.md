@@ -70,7 +70,7 @@ The following table presents the metadata of this samples:
 | **Samples region** | Amazon biome (Brazil) |
 | **Samples size** | `12512` location points |
 | **Samples collection methodology** | Combining base samples and processing using erosion, self organizing-maps, and visual interpretation. |
-| **Samples time period** | `2010-01-01` to `2010-12-31` |
+| **Samples time period** | `2010-01-01` to `2010-11-01` |
 | **Samples labels** | `Cropland_2_cycles`, `Forest`, `Herbaceous_Pasture`, `Mountainside_Forest`, `Riparian_Forest`, `Seasonally_Flooded`, `Secondary_Vegetation`, `Semi_Perennial_Crop`, `Shrubby_Pasture`, `Silviculture`, `Wetland` |
 | **Time series source** | Extracted from [`GLAD LANDSAT ARD`](https://stac.openlandmap.org/landsat_glad.swa.ard2_bimonthly/collection.json?.language=en) product available in Open Land Map |
 | **Time series temporal resolution** | 2-month composites (6 data points per year) |
@@ -129,7 +129,7 @@ The following table presents the metadata of this samples:
 | **Samples region** | Amazon biome (Brazil) |
 | **Samples size** | `21028` location points |
 | **Samples collection methodology** | Combining base samples and processing using erosion, self organizing-maps, and visual interpretation. |
-| **Samples time period** | `2022-01-01` to `2022-12-31` |
+| **Samples time period** | `2022-01-01` to `2022-12-01` |
 | **Samples labels** | `Cropland_2_cycles`,`Forest`,`Herbaceous_Pasture`,`Mountainside_Forest`,`Riparian_Forest`,`Seasonally_Flooded`,`Secondary_Vegetation`,`Semi_Perennial_Crop`,`Shrubby_Pasture`,`Silviculture`,`Water`,`Wetland` |
 | **Time series source** | Extracted from [`LANDSAT-OLI-16D`](https://data.inpe.br/stac/browser/collections/LANDSAT-16D-1) product available in Brazil Data Cube (BDC) |
 | **Time series temporal resolution** | 1-month composites (12 data points per year) |
