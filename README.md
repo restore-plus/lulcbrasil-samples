@@ -131,7 +131,7 @@ The following table presents the metadata of this samples:
 | **Samples collection methodology** | Combining base samples and processing using erosion, self organizing-maps, and visual interpretation. |
 | **Samples time period** | `2022-01-01` to `2022-12-31` |
 | **Samples labels** | `Cropland_2_cycles`,`Forest`,`Herbaceous_Pasture`,`Mountainside_Forest`,`Riparian_Forest`,`Seasonally_Flooded`,`Secondary_Vegetation`,`Semi_Perennial_Crop`,`Shrubby_Pasture`,`Silviculture`,`Water`,`Wetland` |
-| **Time series source** | Extracted from [`LANDSAT-OLI-16D`](https://planetarycomputer.microsoft.com/dataset/landsat-c2-l2) product available in Brazil Data Cube (BDC) |
+| **Time series source** | Extracted from [`LANDSAT-OLI-16D`](https://data.inpe.br/stac/browser/collections/LANDSAT-16D-1) product available in Brazil Data Cube (BDC) |
 | **Time series temporal resolution** | 1-month composites (12 data points per year) |
 | **Time series attributes** | `BLUE`, `EVI`, `GREEN`, `MNDWI`, `NBR`, `NDVI`, `NIR08`, `RED`, `SWIR16`, `SWIR22` |
 | **Contact point** | [<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width="16" height="16" alt="ORCID iD icon"> Isabel Escada](https://orcid.org/0000-0002-5822-8265) |
